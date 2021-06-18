@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  
+
+  padding: 0 2em;
+
+  color: #e5e5e5;
+
+  .header-pages {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  .header-pages > div {
+    padding: 0 10px;
+  }
+  .utils,
+  .user {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    align-items: center;
+    right: 0;
+  }
+  .utils > * {
+    margin: 0 12px;
+  }
+}
