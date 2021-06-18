@@ -25,7 +25,7 @@ const Header = () => {
 
         <div className='user'>
           <div style={{ backgroundColor: '#f1f1f1', height: '32px', width: '32px', marginRight: '7px' }}></div>
-          <FontAwesomeIcon icon={faSortDown} />
+          <FontAwesomeIcon icon={faSortDown} className='down-array' />
         </div>
       </div>
     </div>
