@@ -2,7 +2,7 @@ import Movies from './Movies/Movies'
 
 const Lolomo = (props) => {
   return (
-    <div style={{ color: '#E5E5E5' }}>
+    <div>
       <h3>{props.title}</h3>
       <Movies />
     </div>
