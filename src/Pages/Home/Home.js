@@ -1,7 +1,10 @@
 import Lolomo from '../../components/Lolomo/Lolomo'
+
+import './Home.scss'
+
 const Home = () => {
   return (
-    <div>
+    <div className='home'>
       <Lolomo title={'Popular'} />
       <Lolomo title={'Top Rated'} />
       <Lolomo title={'Upcoming'} />
