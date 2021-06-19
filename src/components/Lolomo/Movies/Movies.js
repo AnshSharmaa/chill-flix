@@ -1,8 +1,27 @@
+import $ from 'jquery'
+import { useRef, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import Movie from './Movie/Movie'
-
+import { LeftArrow, RightArrow } from '../../../Utils/Scroll/Scroll'
 import './Movies.scss'
-// Receives all the movies for foreach
+
+// Receives all the movies
 const Movies = () => {
+  const divRef = useRef(null)
+  const move = divRef.current
+  const [margin, setMargin] = useState()
+  console.log(parseInt($(move).css('margin-left')))
+  function onLeftClick() {
+    LeftArrow(divRef)
+    setMargin(parseInt($(move).css('margin-left')))
+  }
+
+  function onRightClick() {
+    RightArrow(divRef)
+    setMargin(parseInt($(move).css('margin-left')))
+  }
+
   const movie = {
     adult: false,
     backdrop_path: '/irlfhYtHfhZuYpsq2LAoh308NFe.jpg',
@@ -20,15 +39,31 @@ const Movies = () => {
     vote_count: 19088,
   }
 
-  const poster = `https://image.tmdb.org/t/p/w200/${movie.poster_path}`
   return (
-    <div className='movies-list'>
-      <Movie movie={movie} poster={poster} />
-      <Movie movie={movie} poster={poster} />
-      <Movie movie={movie} poster={poster} />
-      <Movie movie={movie} poster={poster} />
-      <Movie movie={movie} poster={poster} />
-    </div>
+    <>
+      <div className='slider'>
+        {(margin || margin !== 0 || margin !== -0 || isNaN(margin)) && (
+          <span className='left-arrow'>
+            <FontAwesomeIcon icon={faChevronLeft} className='left-arrow-icon' onClick={onLeftClick} size />
+          </span>
+        )}
+        <span className='right-arrow'>
+          <FontAwesomeIcon icon={faChevronRight} className='right-arrow-icon' onClick={onRightClick} />
+        </span>
+      </div>
+      <div className='movies-list' ref={divRef}>
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+        <Movie movie={movie} />
+      </div>
+    </>
   )
 }
 
