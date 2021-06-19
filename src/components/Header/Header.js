@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './header.scss'
 
 const Header = () => {
+  const avatar = 'https://mir-s3-cdn-cf.behance.net/project_modules/disp/366be133850498.56ba69ac36858.png'
   return (
     <div className='header'>
       <img src={logo} alt='Header Logo' height='50px' />
@@ -24,7 +25,7 @@ const Header = () => {
         <FontAwesomeIcon icon={faBell} />
 
         <div className='user'>
-          <div style={{ backgroundColor: '#f1f1f1', height: '32px', width: '32px', marginRight: '7px' }}></div>
+          <img src={avatar} style={{ marginRight: '7px' }} height='32px' width='32px' alt={'user avatar'}></img>
           <FontAwesomeIcon icon={faSortDown} className='down-array' />
         </div>
       </div>
