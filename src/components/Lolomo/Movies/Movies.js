@@ -44,7 +44,7 @@ const Movies = () => {
       <div className='slider'>
         {(margin || margin !== 0 || margin !== -0 || isNaN(margin)) && (
           <span className='left-arrow'>
-            <FontAwesomeIcon icon={faChevronLeft} className='left-arrow-icon' onClick={onLeftClick} size />
+            <FontAwesomeIcon icon={faChevronLeft} className='left-arrow-icon' onClick={onLeftClick} />
           </span>
         )}
         <span className='right-arrow'>

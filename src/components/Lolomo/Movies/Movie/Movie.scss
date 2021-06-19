@@ -1,0 +1,46 @@
+.movie {
+  // .movie-details {
+  //   visibility: hidden;
+  //   opacity: 0;
+  //   transition: opacity 0.62s, ease 1s;
+  // }
+  &:hover {
+    visibility: visible;
+    transition: opacity 0.62s, ease 1s;
+    opacity: 1;
+  }
+}
+
+.movie-info {
+  font-weight: 600;
+  &.movie-info > * {
+    padding-right: 10px;
+  }
+}
+.movie-actions {
+  &.movie-actions > * {
+    border: 3px solid;
+    border-radius: 50%;
+    border-color: rgba(255, 255, 255, 0.3);
+
+    padding: 12px;
+    margin-bottom: 8px;
+    &:hover {
+      border-color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.play {
+  background-color: #fff;
+  color: #000;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.square-border {
+  border: 1px solid;
+
+  padding: 1px 8px;
+  margin-right: 10px;
+}
