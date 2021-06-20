@@ -17,4 +17,6 @@ https://api.themoviedb.org/3/movie/upcoming?api_key=4d388821a0a9b0aded367d9dc241
 https://api.themoviedb.org/3/movie/now_playing?api_key=4d388821a0a9b0aded367d9dc2418d49&language=en-US&page=1
 https://api.themoviedb.org/3/trending/movie/week?api_key=4d388821a0a9b0aded367d9dc2418d49
 https://api.themoviedb.org/3/trending/movie/day?api_key=4d388821a0a9b0aded367d9dc2418d49
+
+https://api.themoviedb.org/3/movie/{movie_id}?api_key=4d388821a0a9b0aded367d9dc2418d49&language=en-US
 */

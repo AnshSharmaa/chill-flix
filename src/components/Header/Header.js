@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 import logo from '../../images/Netflix_Logo_RGB.png'
 import { faSearch, faBell, faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,11 +11,20 @@ const Header = () => {
   return (
     <div className='header'>
       <img src={logo} alt='Header Logo' height='50px' />
+
       <div className='header-pages'>
-        <div>Home</div>
+        <NavLink to='/home' exact activeClassName='active'>
+          <div>Home</div>
+        </NavLink>
+
         <div>TV Shows</div>
-        <div>Movies</div>
+
+        <NavLink to='/movies' exact activeClassName='active'>
+          <div>Movies</div>
+        </NavLink>
+
         <div>New & Popular</div>
+
         <div>My List</div>
       </div>
 

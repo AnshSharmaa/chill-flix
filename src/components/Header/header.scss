@@ -1,9 +1,20 @@
 .header {
   display: flex;
-  flex-flow: row;
   align-items: center;
 
   color: #e5e5e5;
+
+  .active {
+    color: #fff !important;
+    font-weight: 600;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: inherit;
+  }
 
   .header-pages {
     display: flex;
