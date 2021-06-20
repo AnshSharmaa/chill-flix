@@ -3,6 +3,16 @@
   opacity: 0.5;
   color: white;
   transition: all 0.2s ease;
-
 }
 
+.swiper-slide{
+  width: auto !important;
+}
+
+.section{
+  &:hover{
+    .swiper{
+      z-index: 10;
+    }
+  }
+}

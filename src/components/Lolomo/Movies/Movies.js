@@ -14,15 +14,15 @@ const Movies = ({ movies }) => {
   return !movies.length ? (
     <h1>Loading... </h1>
   ) : (
-    <>
-      <Swiper slidesPerView={6} spaceBetween={0} slidesPerGroup={5} loop={true} loopFillGroupWithBlank={true} navigation={true} className='swiper'>
+    <div className='section'>
+      <Swiper slidesPerView={6} spaceBetween={20} slidesPerGroup={5} loop={true} loopFillGroupWithBlank={true} navigation={true} className='swiper'>
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
             <Movie movie={movie} key={movie.id} />
           </SwiperSlide>
         ))}
       </Swiper>
-    </>
+    </div>
   )
 }
 
