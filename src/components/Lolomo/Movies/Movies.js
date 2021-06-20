@@ -1,27 +1,16 @@
-import $ from 'jquery'
-import { useRef, useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import Movie from './Movie/Movie'
-import { LeftArrow, RightArrow } from '../../../Utils/Scroll/Scroll'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/swiper.min.css'
+import 'swiper/components/navigation/navigation.min.css'
+import SwiperCore, { Pagination, Navigation } from 'swiper/core'
+
 import './Movies.scss'
+
+SwiperCore.use([Pagination, Navigation])
 
 // Receives all the movies
 const Movies = () => {
-  const divRef = useRef(null)
-  const move = divRef.current
-  const [margin, setMargin] = useState()
-  console.log(parseInt($(move).css('margin-left')))
-  function onLeftClick() {
-    LeftArrow(divRef)
-    setMargin(parseInt($(move).css('margin-left')))
-  }
-
-  function onRightClick() {
-    RightArrow(divRef)
-    setMargin(parseInt($(move).css('margin-left')))
-  }
-
   const movie = {
     adult: false,
     backdrop_path: '/irlfhYtHfhZuYpsq2LAoh308NFe.jpg',
@@ -41,28 +30,38 @@ const Movies = () => {
 
   return (
     <>
-      <div className='slider'>
-        {(margin || margin !== 0 || margin !== -0 || isNaN(margin)) && (
-          <span className='left-arrow'>
-            <FontAwesomeIcon icon={faChevronLeft} className='left-arrow-icon' onClick={onLeftClick} />
-          </span>
-        )}
-        <span className='right-arrow'>
-          <FontAwesomeIcon icon={faChevronRight} className='right-arrow-icon' onClick={onRightClick} />
-        </span>
-      </div>
-      <div className='movies-list' ref={divRef}>
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-        <Movie movie={movie} />
-      </div>
+      <Swiper slidesPerView={6} spaceBetween={0} slidesPerGroup={5} loop={true} loopFillGroupWithBlank={true} navigation={true} className='swiper'>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Movie movie={movie} />
+        </SwiperSlide>
+      </Swiper>
     </>
   )
 }

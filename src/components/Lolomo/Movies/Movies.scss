@@ -1,52 +1,11 @@
-.movies-list {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow-x: auto;
-  // for firefox
-  scrollbar-width: none;
-}
+.swiper-button-prev,
+.swiper-button-next {
+  opacity: 0.5;
+  color: white;
+  transition: all 0.2s ease;
 
-.movies-list::-webkit-scrollbar {
-  display: none;
-}
-
-.movies-list > * {
-  margin: 10px;
-}
-.slider {
-  display: flex;
-  align-items: center;
-  .left-arrow,
-  .right-arrow {
-    padding-top: 300px;
-    font-size: 2rem;
-    z-index: 1;
+  &:hover {
     opacity: 1;
-    color: white;
-
-    @media screen and (max-width: 800px) {
-      height: 129.44px;
-      -webkit-visibility: hidden;
-    }
-  }
-
-  .left-arrow {
-    position: absolute;
-  }
-
-  .right-arrow {
-    position: absolute;
-    right: 3%;
-  }
-
-  .left-arrow-icon,
-  .right-arrow-icon {
-    cursor: pointer;
-
-    &:hover {
-      font-size: 3rem;
-      color: white;
-      transition: all 0.2s ease;
-    }
+    transition: all 0.2s ease;
   }
 }
