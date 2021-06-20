@@ -10,9 +10,10 @@
   left: 5%;
   z-index: 50;
 
-  height: 480px;
+  height: 540px;
   width: 450px;
-
+  transition-duration: 5s;
+  transition-delay: 2s;
   transition: display 1.429s ease;
   background-color: #1f1f1f;
 

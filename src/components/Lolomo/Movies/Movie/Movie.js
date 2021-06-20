@@ -20,6 +20,8 @@ const Movie = ({ movie }) => {
         <img src={backdrop} alt='postercopy' className=' postercopy' />
 
         <div className='movie-details '>
+          <h2 style={{ margin: '5px 0 10x 0 ', fontSize: '1.5em' }}>{movie.original_title}</h2>
+
           <div className='movie-actions'>
             <FontAwesomeIcon icon={faPlay} className='play' />
             <FontAwesomeIcon icon={faPlus} />

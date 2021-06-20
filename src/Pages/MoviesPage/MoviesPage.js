@@ -40,7 +40,7 @@ const MoviesPage = () => {
   }
 
   return (
-    <div className='home'>
+    <div className='all-movies' style={{ marginBottom: '200px' }}>
       <Suspense fallback={<div>Loading...</div>}>
         <Lolomo title={'Popular'} movies={popular} />
         <Lolomo title={'Top Rated'} movies={topRated} />

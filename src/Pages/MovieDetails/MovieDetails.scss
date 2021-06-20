@@ -1,0 +1,28 @@
+.movie-view {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  .movie-view-details {
+    position: absolute;
+    top: 40%;
+    left: 30px;
+    width: 500px;
+    background-color: rgba($color: #1f1f1f, $alpha: 0.2);
+  }
+  .movie-info {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin: 10px 0 15px 0;
+    &.movie-info > * {
+      // padding-right: 10px;
+      margin-right: 15px;
+    }
+  }
+  .square-border {
+    border: 1px solid;
+
+    padding: 1px 8px;
+    margin-right: 10px;
+  }
+}

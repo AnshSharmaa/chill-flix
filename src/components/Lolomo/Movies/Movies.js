@@ -15,7 +15,7 @@ const Movies = ({ movies }) => {
     <h1>Loading... </h1>
   ) : (
     <div className='section'>
-      <Swiper slidesPerView={6} spaceBetween={20} slidesPerGroup={5} loop={true} loopFillGroupWithBlank={true} navigation={true} className='swiper'>
+      <Swiper slidesPerView={6} spaceBetween={20} slidesPerGroup={3} loop={true} loopFillGroupWithBlank={true} navigation={true} className='swiper'>
         {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
             <Movie movie={movie} key={movie.id} />
