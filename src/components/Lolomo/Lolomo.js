@@ -1,10 +1,10 @@
 import Movies from './Movies/Movies'
 
-const Lolomo = (props) => {
+const Lolomo = ({ title, movies }) => {
   return (
     <div>
-      <h3>{props.title}</h3>
-      <Movies />
+      <h3>{title}</h3>
+      <Movies movies={movies} />
     </div>
   )
 }

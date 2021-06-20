@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
+html {
+  height: 100%;
+}
+
 body {
-  background: linear-gradient(#060606 10%, #141414);
+  background: #141414;
+
   font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;
+
   padding: 0 2em;
-  color: #E5E5E5 
+  color: #e5e5e5;
 }

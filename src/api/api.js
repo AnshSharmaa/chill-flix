@@ -8,7 +8,6 @@ export const getTopRated = () => API.get(`/movie/top_rated${key}&language=en-US&
 export const getUpcoming = () => API.get(`/movie/upcoming${key}&language=en-US&page=1`)
 export const getNowPlaying = () => API.get(`/movie/now_playing${key}&language=en-US&page=1`)
 export const getTrendingWeekly = () => API.get(`trending/movie/week${key}`)
-export const getTrendingDay = () => API.get(`/trending/movie/day${key}`)
 
 /*
 https://api.themoviedb.org/3/movie/popular?api_key=4d388821a0a9b0aded367d9dc2418d49&language=en-US&page=1
