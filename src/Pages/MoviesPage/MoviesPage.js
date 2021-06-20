@@ -1,8 +1,8 @@
 import Lolomo from '../../components/Lolomo/Lolomo'
 
-import './Home.scss'
+import './MoviesPage.scss'
 
-const Home = () => {
+const MoviesPage = () => {
   return (
     <div className='home'>
       <Lolomo title={'Popular'} />
@@ -15,4 +15,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default MoviesPage
