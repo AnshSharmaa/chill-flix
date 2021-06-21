@@ -1,44 +1,39 @@
 import React, { Suspense, useState, useEffect } from 'react'
-import * as api from '../../api/api'
+import { getPopularMovies, getTopRatedMovies, getNowPlayingMovies, getTrendingMovies, getUpcomingMovies } from '../../actions/actions'
+
+import { useDispatch, useSelector } from 'react-redux'
 
 import './MoviesPage.scss'
 const Lolomo = React.lazy(() => import('../../components/Lolomo/Lolomo'))
 
 const MoviesPage = () => {
-  const [popular, setPopular] = useState({ popular: [] })
-  const [topRated, setTopRated] = useState({ topRated: [] })
-  const [upcoming, setUpcoming] = useState({ upcoming: [] })
-  const [nowPlaying, setNowPlaying] = useState({ nowPlaying: [] })
-  const [trending, setTrending] = useState({ trending: [] })
   const [error, setError] = useState(null)
+
+  const dispatch = useDispatch()
+  const popular = useSelector((state) => state.movies.popular)
+  const topRated = useSelector((state) => state.movies.topRated)
+  const upcoming = useSelector((state) => state.movies.upcoming)
+  const nowPlaying = useSelector((state) => state.movies.nowPlaying)
+  const trending = useSelector((state) => state.movies.trending)
 
   useEffect(() => {
     getData()
-  }, [])
+  }, [dispatch])
 
   if (error) return 'Error!'
 
   async function getData() {
     try {
-      const popularResponse = await api.getPopular()
-      const topRatedResponse = await api.getTopRated()
-      const upcomingResponse = await api.getUpcoming()
-      const nowPlayingResponse = await api.getNowPlaying()
-      const trendingResponse = await api.getTrendingWeekly()
-
-      if (popularResponse && popularResponse.data && popularResponse.data.results) {
-        setPopular(popularResponse.data.results)
-      }
-      if (topRatedResponse && topRatedResponse.data && topRatedResponse.data.results) setTopRated(topRatedResponse.data.results)
-      setUpcoming(upcomingResponse.data.results)
-      setNowPlaying(nowPlayingResponse.data.results)
-      setTrending(trendingResponse.data.results)
+      dispatch(getPopularMovies())
+      dispatch(getTopRatedMovies())
+      dispatch(getUpcomingMovies())
+      dispatch(getNowPlayingMovies())
+      dispatch(getTrendingMovies())
     } catch (error) {
       console.error(error)
       setError(true)
     }
   }
-
   return (
     <div className='all-movies' style={{ marginBottom: '200px' }}>
       <Suspense fallback={<div>Loading...</div>}>

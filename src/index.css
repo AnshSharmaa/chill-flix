@@ -16,6 +16,7 @@ body {
   color: #e5e5e5;
 }
 
+/* Hiding the scroll bars */
 ::-webkit-scrollbar {
   display: none;
 }

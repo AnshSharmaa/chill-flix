@@ -19,3 +19,9 @@ export const genreList = {
   10752: 'War',
   10770: 'TV Movie',
 }
+
+export const FETCH_POPULAR = 'FETCH_POPULAR'
+export const FETCH_TopRated = 'FETCH_TopRated'
+export const FETCH_Upcoming = 'FETCH_Upcoming'
+export const FETCH_NowPlaying = 'FETCH_NowPlaying'
+export const FETCH_Trending = 'FETCH_Trending'

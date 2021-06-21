@@ -15,6 +15,7 @@ function App() {
           <Route path='/' exact component={() => <Redirect to='/home' />} />
           <Route path='/home' exact component={Home} />
           <Route path='/movies' exact component={MoviePage} />
+          {/* dynamic route for  individual movie */}
           <Route path='/movie/:id' exact component={MovieDetails} />
         </Switch>
       </div>

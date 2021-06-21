@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 
 import { genreList } from '../../../../constants/constants'
@@ -11,9 +10,9 @@ import './Movie.scss'
 const Movie = ({ movie }) => {
   const poster = `https://image.tmdb.org/t/p/w342/${movie.poster_path}`
   const backdrop = `https://image.tmdb.org/t/p/w300/${movie.backdrop_path}`
-  const movieRef = useRef()
+
   return (
-    <Link className='movie' id='movie' to={{ pathname: `/movie/${movie.id}`, state: movie }} ref={movieRef}>
+    <Link className='movie' id='movie' to={{ pathname: `/movie/${movie.id}`, state: movie }}>
       <img src={poster} alt='poster' className=' poster' />
 
       <div className='preview'>

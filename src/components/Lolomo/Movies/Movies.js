@@ -9,16 +9,14 @@ import './Movies.scss'
 
 SwiperCore.use([Pagination, Navigation])
 
-// Receives all the movies
+// Receives all the movies and uses swipe.js for scrolling
 const Movies = ({ movies }) => {
-  return !movies.length ? (
-    <h1>Loading... </h1>
-  ) : (
+  return (
     <div className='section'>
       <Swiper slidesPerView={6} spaceBetween={20} slidesPerGroup={3} loop={true} loopFillGroupWithBlank={true} navigation={true} className='swiper'>
-        {movies.map((movie) => (
+        {movies[0].map((movie) => (
           <SwiperSlide key={movie.id}>
-            <Movie movie={movie} key={movie.id} />
+            <Movie movie={movie} />
           </SwiperSlide>
         ))}
       </Swiper>

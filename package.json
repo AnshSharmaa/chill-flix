@@ -1,7 +1,6 @@
 {
   "name": "chill-flix",
   "version": "0.1.0",
-  "homepage": "https://anshsharmaa.github.io/chill-flix/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
