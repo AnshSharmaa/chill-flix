@@ -6,7 +6,6 @@ const MovieDetails = () => {
   const location = useLocation()
   const movie = location.state
 
-  console.log(movie)
   const backdrop = `https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`
   return (
     <div className='movie-view'>

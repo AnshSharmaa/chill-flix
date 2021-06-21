@@ -1,5 +1,3 @@
-export const posterLink = ``
-
 export const genreList = {
   12: 'Adventure',
   14: 'Fantasy',
@@ -21,4 +19,3 @@ export const genreList = {
   10752: 'War',
   10770: 'TV Movie',
 }
-export const posterlink = ``
