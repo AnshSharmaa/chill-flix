@@ -16,5 +16,5 @@ official definition of [lolomo](https://twitter.com/arungupta/status/62440205111
 
 - [x] Navigation and visit each listing 
 - [x] React Router 
-- []  redux 
+- [ ]  redux 
 - [x] navbar on all pages  
