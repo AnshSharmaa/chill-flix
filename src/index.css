@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
-html {
-  height: 100%;
-}
-
 body {
   background: #141414;
 
@@ -14,6 +10,8 @@ body {
 
   padding: 0 2em;
   color: #e5e5e5;
+
+  margin-bottom: 100px;
 }
 
 /* Hiding the scroll bars */
