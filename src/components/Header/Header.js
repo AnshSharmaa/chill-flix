@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 import logo from '../../images/Netflix_Logo_RGB.png'
-import { faSearch, faBell, faSortDown } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faBell, faSortDown, faGift, faSlidersH } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import './header.scss'
@@ -34,9 +34,15 @@ const Header = () => {
       <div className='utils' style={{ fontSize: '1.3em' }}>
         <FontAwesomeIcon icon={faSearch} />
         <FontAwesomeIcon icon={faBell} />
+        <FontAwesomeIcon icon={faGift} />
 
         <div className='user'>
           <img src={avatar} style={{ marginRight: '7px' }} height='32px' width='32px' alt={'user avatar'}></img>
+          <FontAwesomeIcon icon={faSortDown} className='down-array' />
+        </div>
+
+        <div className='user'>
+          <FontAwesomeIcon icon={faSlidersH} style={{ marginRight: '7px' }} />
           <FontAwesomeIcon icon={faSortDown} className='down-array' />
         </div>
       </div>
