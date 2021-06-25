@@ -16,11 +16,14 @@ const MoviesPage = () => {
   const nowPlaying = useSelector((state) => state.movies.nowPlaying)
   const trending = useSelector((state) => state.movies.trending)
 
+  console.log(useSelector((state) => state))
   useEffect(() => {
     getData()
   }, [dispatch])
 
-  if (error) return 'Error!'
+  if (error) {
+    return 'Error!'
+  }
 
   async function getData() {
     try {

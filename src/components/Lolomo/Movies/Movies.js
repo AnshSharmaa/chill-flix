@@ -14,7 +14,7 @@ const Movies = ({ movies }) => {
   return (
     <div className='section'>
       <Swiper slidesPerView={6} spaceBetween={20} slidesPerGroup={3} loop={true} loopFillGroupWithBlank={true} navigation={true} className='swiper'>
-        {movies[0].map((movie) => (
+        {movies.map((movie) => (
           <SwiperSlide key={movie.id}>
             <Movie movie={movie} />
           </SwiperSlide>

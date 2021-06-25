@@ -18,7 +18,7 @@ const Movie = ({ movie }) => {
       <div className='preview'>
         <img src={backdrop} alt='postercopy' className=' postercopy' />
 
-        <div className='movie-details '>
+        <div className='movie-details'>
           <h2 style={{ margin: '0 0 10x 0 ', fontSize: '1.5em' }}>{movie.original_title}</h2>
 
           <div className='movie-actions'>
