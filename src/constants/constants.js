@@ -20,6 +20,8 @@ export const genreList = {
   10770: 'TV Movie',
 }
 
+// export const TypesOfMovies = ['Popular','Top Rated','Upcoming','Now Playing','Trending this week']
+
 export const FETCH_POPULAR = 'FETCH_POPULAR'
 export const FETCH_TopRated = 'FETCH_TopRated'
 export const FETCH_Upcoming = 'FETCH_Upcoming'

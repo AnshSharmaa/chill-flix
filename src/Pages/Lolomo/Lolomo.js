@@ -1,12 +1,12 @@
-import React, { Suspense, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { getPopularMovies, getTopRatedMovies, getNowPlayingMovies, getTrendingMovies, getUpcomingMovies } from '../../actions/actions'
+import MoviesRow from '../../components/MoviesRow/MoviesRow'
 
 import { useDispatch, useSelector } from 'react-redux'
 
-import './MoviesPage.scss'
-const Lolomo = React.lazy(() => import('../../components/Lolomo/Lolomo'))
+import './Lolomo.scss'
 
-const MoviesPage = () => {
+const Lolomo = () => {
   const [error, setError] = useState(null)
 
   const dispatch = useDispatch()
@@ -19,7 +19,7 @@ const MoviesPage = () => {
   console.log(useSelector((state) => state))
   useEffect(() => {
     getData()
-  }, [dispatch])
+  }, [])
 
   if (error) {
     return 'Error!'
@@ -39,15 +39,13 @@ const MoviesPage = () => {
   }
   return (
     <div className='all-movies' style={{ marginBottom: '200px' }}>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Lolomo title={'Popular'} movies={popular} />
-        <Lolomo title={'Top Rated'} movies={topRated} />
-        <Lolomo title={'Upcoming'} movies={upcoming} />
-        <Lolomo title={'Now Playing'} movies={nowPlaying} />
-        <Lolomo title={'Trending this week'} movies={trending} />
-      </Suspense>
+      <MoviesRow title={'Popular'} movies={popular} />
+      <MoviesRow title={'Top Rated'} movies={topRated} />
+      <MoviesRow title={'Upcoming'} movies={upcoming} />
+      <MoviesRow title={'Now Playing'} movies={nowPlaying} />
+      <MoviesRow title={'Trending this week'} movies={trending} />
     </div>
   )
 }
 
-export default MoviesPage
+export default Lolomo

@@ -9,14 +9,14 @@ import './Movie.scss'
 
 const Movie = ({ movie }) => {
   const poster = `https://image.tmdb.org/t/p/w342/${movie.poster_path}`
-  const backdrop = `https://image.tmdb.org/t/p/w300/${movie.backdrop_path}`
+  const backdrop = `https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`
 
   return (
     <Link className='movie' id='movie' to={{ pathname: `/movie/${movie.id}`, state: movie }}>
-      <img src={poster} alt='poster' className=' poster' />
+      <img src={poster} alt='Poster' className=' poster' />
 
       <div className='preview'>
-        <img src={backdrop} alt='postercopy' className=' postercopy' />
+        <img src={backdrop} alt='Poster' className=' postercopy' />
 
         <div className='movie-details'>
           <h2 style={{ margin: '0 0 10x 0 ', fontSize: '1.5em' }}>{movie.original_title}</h2>

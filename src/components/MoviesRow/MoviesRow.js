@@ -1,8 +1,12 @@
 import Movies from './Movies/Movies'
+import Loading from '../Loading/Loading'
 // List of movies with their title
-const Lolomo = ({ title, movies }) => {
+const MoviesRow = ({ title, movies }) => {
   return !movies?.length ? (
-    <h1>Loading... </h1>
+    <>
+      <h1>{title}</h1>
+      <Loading />
+    </>
   ) : (
     <div>
       <h1>{title}</h1>
@@ -11,4 +15,4 @@ const Lolomo = ({ title, movies }) => {
   )
 }
 
-export default Lolomo
+export default MoviesRow
