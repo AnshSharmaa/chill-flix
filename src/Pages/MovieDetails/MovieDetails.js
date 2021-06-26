@@ -6,10 +6,10 @@ const MovieDetails = () => {
   const location = useLocation()
   const movie = location.state
 
-  const backdrop = `https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`
+  const backdrop = `https://image.tmdb.org/t/p/original/${movie.backdrop_path}`
   return (
     <div className='movie-view'>
-      <img src={backdrop} alt='backdrop' />
+      <img src={backdrop} alt='backdrop' width='1600px' height='900px' />
 
       <div className='movie-view-details'>
         <h1>{movie.original_title}</h1>
@@ -25,7 +25,7 @@ const MovieDetails = () => {
           </span>
         </div>
 
-        <div>
+        <div style={{ paddingBottom: '10px' }}>
           {movie.genre_ids.map((genre) => (
             <>
               <span key={genre}>{genreList[genre]}</span>
